@@ -1,7 +1,7 @@
-using TranslationTokenExample.Labels;
+using TranslationLabelExample.Labels;
 using Umbraco.Cms.Core.Models.PublishedContent;
 
-namespace TranslationTokenExample;
+namespace TranslationLabelExample;
 
 public static class ExampleService
 {

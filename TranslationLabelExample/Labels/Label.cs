@@ -1,4 +1,4 @@
-namespace TranslationTokenExample.Labels;
+namespace TranslationLabelExample.Labels;
 
 public abstract record Label()
 {
@@ -6,7 +6,7 @@ public abstract record Label()
     public static implicit operator Label(string value)
         => Text(value);
 
-    // 👇 This static factory abstracts the translatable text token,
+    // 👇 This static factory abstracts the translatable text label,
     // so the rest of the application doesn't need to know that it exists
     public static Label Translate(string key, params object?[] parameters)
         => new TranslatableLabel(key, parameters);
@@ -16,7 +16,7 @@ public abstract record Label()
         => new StaticLabel(value);
 }
 
-// 👇 We move the value parameter to the static text token
+// 👇 We move the value parameter to the static text label
 // We also move the ToString override to here, because this is the static
 public record StaticLabel(string Value) : Label
 {
