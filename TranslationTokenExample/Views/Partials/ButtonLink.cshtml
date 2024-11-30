@@ -1,0 +1,6 @@
+@* 👇 This page now uses a custom base class *@
+@inherits CustomViewPage<LinkDomainModel>
+
+<a class="btn btn-primary" href="@Model.Url" alt="@Model.Alt">
+    @Model.Text
+</a>
